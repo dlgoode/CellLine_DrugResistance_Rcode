@@ -2,7 +2,9 @@
 ### 1) Zero count genes removed *prior* to taking Rlogs
 ### 2) genes ranked according to sign
 
-library(GSEA)
+library(GSVA)
+library(ggplot2)
+library(pheatmap)
 
 All.sets.GSVA.signed.scores <- gsva( Trimmed.CellLine.TimeCourse.Rlogs, All.gene.sets[[1]][1:28], method="ssgsea", rnaseq=T, abs.ranking=F )
 
