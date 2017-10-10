@@ -1,7 +1,8 @@
-### Redo splines analysis with 
+### Redo splines analysis with
 ### 1) Zero count genes removed *prior* to taking Rlogs
 ### 2) genes ranked according to sign
 
+library(GSVA)
 
 All.sets.GSVA.signed.scores <- gsva( Trimmed.CellLine.TimeCourse.Rlogs, All.gene.sets[[1]][1:28], method="ssgsea", rnaseq=T, abs.ranking=F )
 
@@ -17,12 +18,11 @@ fit.778.Erlotinib <- lmFit(Combined.sets.GSVA.scores[,c(23:31)], design.778.Erlo
 ### Function to color strings based on content.
 
 color.by.string <- function( string, search, color1="black", color2="red") {
-  
+
   if ( grepl( search, string ) ) {
-    
+
     return( color2 )
   }
 
-  return( color1 )  
+  return( color1 )
 }
-
