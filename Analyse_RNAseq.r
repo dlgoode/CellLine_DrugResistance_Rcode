@@ -1,3 +1,6 @@
+### Main code for loading & plotting HTSeq data across time points
+### and plotting expression values, with colors & shapes to define
+### which cell line data came from.
 
 > getwd()
 [1] "C:/Users/goode david/Documents/Peter Mac/Arcadi_htseq_data"
