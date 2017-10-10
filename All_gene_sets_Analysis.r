@@ -19,7 +19,7 @@ for( i in 1:27 ) {
   
   filename = paste(Set,"_grouped",".pdf",sep="")
   
-  pdf(filename,width=10)
+  pdf(filename,width=10.5)
   
   plot( order.together, Scores[order.samples.by.date], ylab="Scaled ssGSEA score", frame=F, pch=CellLine.Shapes, xlim=c(0,28), las=2,
         xaxt="n", col=colours.by.Expt, ylim=c(min.max[1]-0.1, min.max[2]+0.1), xlab="", main=Set )
